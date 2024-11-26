@@ -1,0 +1,16 @@
+# fly.toml app configuration file generated for flyirc on 2024-11-25T14:15:09Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'flyirc'
+primary_region = 'lhr'
+
+[build]
+
+[[mounts]]
+source = 'data'
+destination = '/var/opt/thelounge'
+
+[[vm]]
+size = 'shared-cpu-1x'
